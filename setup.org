@@ -1,0 +1,133 @@
+* Setting up Rtags
+** Cmake output
+james at jamesretina in ~/.bin/rtags on master cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 .
+-- Using Clang version 3.6.2 from /usr/local/Cellar/llvm/3.6.2/lib with CXXFLAGS -I/usr/local/Cellar/llvm/3.6.2/include -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+OS X version 10.11.4
+-- Using FSEvents
+--
+-- The following OPTIONAL packages have been found:
+
+ * ZLIB
+ * OpenSSL
+ * PkgConfig , helper tool , <https://www.freedesktop.org/wiki/Software/pkg-config/>
+   We use it to get the bash completion installation path, and replace the prefix with the value of CMAKE_INSTALL_PREFIX.
+
+-- The following REQUIRED packages have been found:
+
+ * LibClang
+
+-- The following OPTIONAL packages have not been found:
+
+ * Lua (required version >= 5.3) , a scripting language , <https://www.lua.org/>
+   Dependency of the selene sub-module, see http://www.rtags.net for a more detailed description.
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/james/.bin/rtags
+** Make output
+james at jamesretina in ~/.bin/rtags on master make
+[  1%] Built target emacs_byte_compile_flycheck-rtags.el
+Scanning dependencies of target rtags
+[  2%] Building CXX object src/CMakeFiles/rtags.dir/ClangIndexer.cpp.o
+[  4%] Building CXX object src/CMakeFiles/rtags.dir/ClangThread.cpp.o
+[  5%] Building CXX object src/CMakeFiles/rtags.dir/ClassHierarchyJob.cpp.o
+[  6%] Building CXX object src/CMakeFiles/rtags.dir/CompilerManager.cpp.o
+[  8%] Building CXX object src/CMakeFiles/rtags.dir/CompletionThread.cpp.o
+[  9%] Building CXX object src/CMakeFiles/rtags.dir/DependenciesJob.cpp.o
+[ 11%] Building CXX object src/CMakeFiles/rtags.dir/FileManager.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/rtags.dir/FindFileJob.cpp.o
+[ 13%] Building CXX object src/CMakeFiles/rtags.dir/FindSymbolsJob.cpp.o
+[ 15%] Building CXX object src/CMakeFiles/rtags.dir/FollowLocationJob.cpp.o
+[ 16%] Building CXX object src/CMakeFiles/rtags.dir/IncludeFileJob.cpp.o
+[ 18%] Building CXX object src/CMakeFiles/rtags.dir/IndexerJob.cpp.o
+[ 19%] Building CXX object src/CMakeFiles/rtags.dir/JobScheduler.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/rtags.dir/ListSymbolsJob.cpp.o
+[ 22%] Building CXX object src/CMakeFiles/rtags.dir/Location.cpp.o
+[ 23%] Building CXX object src/CMakeFiles/rtags.dir/Preprocessor.cpp.o
+[ 25%] Building CXX object src/CMakeFiles/rtags.dir/Project.cpp.o
+[ 26%] Building CXX object src/CMakeFiles/rtags.dir/QueryJob.cpp.o
+[ 27%] Building CXX object src/CMakeFiles/rtags.dir/QueryMessage.cpp.o
+[ 29%] Building CXX object src/CMakeFiles/rtags.dir/RClient.cpp.o
+[ 30%] Building CXX object src/CMakeFiles/rtags.dir/RTags.cpp.o
+[ 31%] Building CXX object src/CMakeFiles/rtags.dir/ReferencesJob.cpp.o
+[ 33%] Building CXX object src/CMakeFiles/rtags.dir/Sandbox.cpp.o
+[ 34%] Building CXX object src/CMakeFiles/rtags.dir/ScanThread.cpp.o
+[ 36%] Building CXX object src/CMakeFiles/rtags.dir/Server.cpp.o
+[ 37%] Building CXX object src/CMakeFiles/rtags.dir/Source.cpp.o
+[ 38%] Building CXX object src/CMakeFiles/rtags.dir/StatusJob.cpp.o
+[ 40%] Building CXX object src/CMakeFiles/rtags.dir/Symbol.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/rtags.dir/SymbolInfoJob.cpp.o
+[ 43%] Building CXX object src/CMakeFiles/rtags.dir/TokensJob.cpp.o
+[ 44%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/Connection.cpp.o
+[ 45%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/EventLoop.cpp.o
+[ 47%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/FileSystemWatcher.cpp.o
+[ 48%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/MessageQueue.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/Path.cpp.o
+[ 51%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/Process.cpp.o
+[ 52%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/Rct.cpp.o
+[ 54%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/SharedMemory.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/SocketClient.cpp.o
+[ 56%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/SocketServer.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/Thread.cpp.o
+[ 59%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/ThreadPool.cpp.o
+[ 61%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/Timer.cpp.o
+[ 62%] Building CXX object src/CMakeFiles/rtags.dir/rct/rct/FileSystemWatcher_fsevents.cpp.o
+[ 63%] Linking CXX static library librtags.a
+[ 87%] Built target rtags
+Scanning dependencies of target rdm
+[ 88%] Building CXX object src/CMakeFiles/rdm.dir/rdm.cpp.o
+[ 90%] Linking CXX executable ../bin/rdm
+[ 90%] Built target rdm
+[ 91%] Built target emacs_byte_compile_company-rtags.el
+Scanning dependencies of target rc
+[ 93%] Building CXX object src/CMakeFiles/rc.dir/rc.cpp.o
+[ 94%] Linking CXX executable ../bin/rc
+[ 94%] Built target rc
+[ 95%] Built target emacs_byte_compile_rtags.el
+Scanning dependencies of target rp
+[ 97%] Building CXX object src/CMakeFiles/rp.dir/rp.cpp.o
+[ 98%] Linking CXX executable ../bin/rp
+[ 98%] Built target rp
+[100%] Built target emacs_byte_compile_rtags-ac.el
+* Xcode project 
+** Link
+https://github.com/jojojames/DummyXcode
+compile_commands.json located in build/reports
+https://github.com/jojojames/DummyXcode/blob/master/build/reports/compile_commands.json
+** Setup
+james at jamesretina in ~ cd Developer/DummyXcode
+james at jamesretina in ~/Developer/DummyXcode ls
+DummyXcode/           DummyXcodeTests/
+DummyXcode.xcodeproj/ DummyXcodeUITests/
+** Building
+james at jamesretina in ~/Developer/DummyXcode xcodebuild | xcpretty -r json-compilation-database
+2016-06-25 11:34:19.045 xcodebuild[44294:209675] [MT] PluginLoading: Required plug-in compatibility UUID ACA8656B-FEA8-4B6D-8E4A-93F4C95C362C for plug-in at path '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/XVim.xcplugin' not present in DVTPlugInCompatibilityUUIDs
+▸ Building DummyXcode/DummyXcode [(Release)]
+▸ Check Dependencies
+▸ Compiling ViewController.m
+▸ Compiling main.m
+▸ Compiling main.m
+▸ Compiling ViewController.m
+▸ Compiling AppDelegate.m
+▸ Compiling AppDelegate.m
+▸ Compiling LaunchScreen.storyboard
+▸ Compiling Main.storyboard
+▸ Processing Info.plist
+▸ Touching DummyXcode.app
+▸ Signing build/Release-iphoneos/DummyXcode.app
+▸ Build Succeeded
+james at jamesretina in ~/Developer/DummyXcode
+
+* rdm Log
+** Running rtags
+$ rdm
+$ cd DummyXcode/
+$ rc -J build/reports/
+** Error
+[100%] 3/3 11:42:22 ~/Developer/DummyXcode/DummyXcode/AppDelegate.m in 8984ms. (35 syms, 24 symNames, 1 includes, 1 of 2 files, symbols: 46 of 47, 414 cursors, 1 queried 0ms) (8982/0/1ms). (priority 0)
+Jobs took 9.00s, (avg 1.50s). We're using 0mb of memory.
+Output from /Users/james/Developer/DummyXcode/DummyXcode/AppDelegate.m:
+2431 errors generated.
+2432 errors generated.
+error: unknown argument: '-fembed-bitcode-marker'
+/Users/james/Developer/DummyXcode/DummyXcode/AppDelegate.h:9:9: fatal error: could not build module 'UIKit'
