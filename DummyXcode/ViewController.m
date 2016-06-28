@@ -13,6 +13,7 @@
 @end
 
 @implementation ViewController
+@synthesize textString;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

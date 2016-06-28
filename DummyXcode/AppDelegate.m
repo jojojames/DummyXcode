@@ -44,6 +44,7 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
     ViewController* v = [[ViewController alloc] init];
+//    NSString* z = v.textString;
 }
 
 #pragma mark - Core Data stack
